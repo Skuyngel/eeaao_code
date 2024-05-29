@@ -1,20 +1,2 @@
-body {
-    background-color: black;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
- }
- 
-.parentcontainer {
-    display: grid;
-    box-sizing: border-box;
-    gap: 5px;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
-    /*min-height:calc(100vh);*/
- }
-
-button {
-color: aqua;
-font-size: 20vh;
- }
+body{
+}
