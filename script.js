@@ -6,7 +6,3 @@ function changeImage() {
     image.src = images[x] + ".png";
     x = (x + 1) % images.length; 
 }
-
-function changeButton() {
-x.style.display = "none";
-}
