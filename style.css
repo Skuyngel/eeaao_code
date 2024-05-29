@@ -2,5 +2,10 @@ body{
 }
 
 .parentcontainer{
-    display: contents;
+    display: grid;
+   box-sizing: border-box;
+   gap: 5px;
+   grid-template-columns: repeat(3, auto);
+   grid-template-rows: repeat(3, auto);
+  /* min-height:calc(100vh - 70px);*/
 }
