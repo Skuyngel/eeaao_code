@@ -1,4 +1,9 @@
-body{
+
+body {
+  background-color:  #F0E2C5;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .parentcontainer{
@@ -8,4 +13,10 @@ body{
    grid-template-columns: repeat(3, auto);
    grid-template-rows: repeat(3, auto);
   /* min-height:calc(100vh - 70px);*/
+}
+
+.button{
+size: 50px;
+grid-row: 1;
+grid-column: 2;
 }
