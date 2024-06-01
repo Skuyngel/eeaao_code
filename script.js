@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('moveButton');
   const image = document.getElementById('image');
 
-  image.src = images[0] + ".png"; 
-  
+  // Set the initial image source only once when the DOM is fully loaded
+  image.src = images[0] + ".png";
+
   const positions = [
     [1, 1],
     [1, 2],
@@ -26,8 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentIndex = 0; 
 
   button.addEventListener('click', () => {
+    // Update the image source on button click
+    x = (x + 1) % images.length;
     image.src = images[x] + ".png";
-    x = (x + 1) % images.length; 
 
     // Get the new position from the array
     const newPosition = positions[currentIndex];
