@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   image.src = images[0] + ".png";
 
   const positions = [
-    [1, 1],
+    [8, 11],
     [3, 3],
     [6, 6],
     [9, 9],

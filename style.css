@@ -7,8 +7,14 @@ body {
 }
 
 img{
+  margin-top: 12vh;
+  margin-bottom: 2vh;
+
   width: 100%;
   height: auto;
+  grid-row: 1/25;
+  grid-column: 4/13;
+  place-items: center; 
 }
 
 .parentcontainer{
@@ -19,9 +25,11 @@ img{
    grid-template-rows: repeat(24, auto);
 min-height:calc(100vh);
 }
-
+/*
 .button{
-size: 50vh;
+  color: aqua;
+size: 100vh;
+margin: 1cm;
 }
 
 circle{
