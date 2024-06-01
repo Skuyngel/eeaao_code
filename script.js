@@ -9,17 +9,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('moveButton');
   const image = document.getElementById('image');
 
+  // Array of positions for the button [row, column]
+  const positions = [
+    [1, 1],
+    [1, 2],
+    [1, 3],
+    [2, 1],
+    [2, 2],
+    [2, 3],
+    [3, 1],
+    [3, 2],
+    [3, 3]
+  ];
+
+  let currentIndex = 0; // Start with the first position
+
   button.addEventListener('click', () => {
-    // Change the image source
     image.src = images[x] + ".png";
     x = (x + 1) % images.length; 
 
-    // Generate random positions for the button within the grid
-    const newRow = Math.floor(Math.random() * 3) + 1; // Random row between 1 and 3
-    const newColumn = Math.floor(Math.random() * 3) + 1; // Random column between 1 and 3
+    // Get the new position from the array
+    const newPosition = positions[currentIndex];
+    const newRow = newPosition[0];
+    const newColumn = newPosition[1];
 
-    // Update the button's grid position
-    button.style.gridRow = 3;
-    button.style.gridColumn = 3;
+    // Update the button's position
+    button.style.gridRow = newRow;
+    button.style.gridColumn = newColumn;
+
+    // Increment the index to point to the next position
+    currentIndex = (currentIndex + 1) % positions.length;
   });
 });
