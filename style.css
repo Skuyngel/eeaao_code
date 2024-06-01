@@ -14,7 +14,28 @@ img{
   height: auto;
   grid-row: 1/25;
   grid-column: 4/13;
-  place-items: center; 
+}
+
+
+.image-small {
+  width: 100%;
+  height: auto;
+  grid-row: 1/20;
+  grid-column: 4/13;
+}
+
+.image-medium {
+  width: 100%;
+  height: auto;
+  grid-row: 1/10;
+  grid-column: 4/13;
+}
+
+.image-large {
+  width: 100%;
+  height: auto;
+  grid-row: 1/20;
+  grid-column: 4/13;
 }
 
 .parentcontainer{

@@ -5,12 +5,15 @@ const images = [
     "pictures_green/gp8", "pictures_green/gp9", "pictures_green/gp10"
 ];
 
+const sizes = ['image-small', 'image-medium', 'image-large'];
+
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('moveButton');
   const image = document.getElementById('image');
 
   // Set the initial image source only once when the DOM is fully loaded
   image.src = images[0] + ".png";
+  image.classList.add(sizes[0]);
 
   const positions = [
     [8, 11],
@@ -28,11 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   button.addEventListener('click', () => {
     // Update the image source on button click
-    x = (x + 1) % images.length;
-    image.src = images[x] + ".png";
+    const nextIndex = (currentIndex + 1) % images.length;
+    image.src = images[nextIndex] + ".png";
+
+    // Update the image size
+    image.classList.remove(...sizes); // Remove all size classes
+    image.classList.add(sizes[nextIndex % sizes.length]); // Add new size class
 
     // Get the new position from the array
-    const newPosition = positions[currentIndex];
+    const newPosition = positions[nextIndex];
     const newRow = newPosition[0];
     const newColumn = newPosition[1];
 
@@ -41,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
     button.style.gridColumn = newColumn;
 
     // Increment the index to point to the next position
-    currentIndex = (currentIndex + 1) % positions.length;
+    currentIndex = nextIndex;
   });
 });
-
