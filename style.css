@@ -28,6 +28,9 @@ grid-row: 1;
 grid-column: 2;
 }
 
+circle{
+}
+/*
 #circle{
     animation: pulse;
 }
@@ -41,5 +44,6 @@ grid-column: 2;
     }
     100% {
         transform: scale(1);
+        /*
     }
 }

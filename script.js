@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('moveButton');
   const image = document.getElementById('image');
 
-  // Array of positions for the button [row, column]
   const positions = [
     [1, 1],
     [1, 2],
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     [3, 3]
   ];
 
-  let currentIndex = 0; // Start with the first position
+  let currentIndex = 0; 
 
   button.addEventListener('click', () => {
     image.src = images[x] + ".png";
