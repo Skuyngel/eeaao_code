@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const positions = [
     [1, 1],
-    [1, 2],
-    [1, 3],
-    [2, 1],
-    [2, 2],
+    [3, 3],
+    [6, 6],
+    [9, 9],
+    [12, 12],
     [2, 3],
     [3, 1],
     [3, 2],
@@ -44,3 +44,4 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = (currentIndex + 1) % positions.length;
   });
 });
+
