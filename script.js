@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('moveButton');
   const image = document.getElementById('image');
 
+  image.src = images[0] + ".png"; 
+  
   const positions = [
     [1, 1],
     [1, 2],

@@ -17,8 +17,8 @@ img{
   display: grid;
    box-sizing: border-box;
    gap: 5px;
-   grid-template-columns: repeat(3, auto);
-   grid-template-rows: repeat(3, auto);
+   grid-template-columns: repeat(16, auto);
+   grid-template-rows: repeat(24, auto);
 min-height:calc(100vh);
 }
 
