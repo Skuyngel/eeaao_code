@@ -1,34 +1,27 @@
 
 body {
-  background-color:  #F0E2C5;
+  background-color:  #000000;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 
 img{
-  margin-top: 12vh;
-  margin-bottom: 2vh;
-
   width: 100%;
   height: auto;
-  grid-row: 1/25;
-  grid-column: 4/13;
 }
 
 
 .image-small {
-  width: 100%;
-  height: auto;
-  grid-row: 1/20;
-  grid-column: 4/13;
+  grid-row: 12; /* oben unten*/
+  grid-column: 1/17; /*thesides*/
 }
 
 .image-medium {
   width: 100%;
   height: auto;
-  grid-row: 1/10;
-  grid-column: 4/13;
+  grid-row: 11;
+  grid-column: 1/17;
 }
 
 .image-large {
@@ -46,7 +39,7 @@ img{
    grid-template-rows: repeat(24, auto);
 min-height:calc(100vh);
 }
-/*
+
 .button{
   color: aqua;
 size: 100vh;

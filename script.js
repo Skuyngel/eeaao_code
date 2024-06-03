@@ -5,7 +5,7 @@ const images = [
     "pictures_green/gp8", "pictures_green/gp9", "pictures_green/gp10"
 ];
 
-const sizes = ['image-small', 'image-medium', 'image-large'];
+const sizes = ['image-small', 'image-medium',  'image-medium',  'image-medium',  'image-medium',  'image-small',  'image-medium','image-small','image-medium'];
 
 document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('moveButton');
