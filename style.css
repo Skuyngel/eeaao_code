@@ -50,11 +50,15 @@ padding: 50px 50px;
 overflow: hidden;
 }
 
-circle{
+#circle {
+    opacity: 0;
+    display: none;
 }
-/*
-#circle{
-    animation: pulse;
+
+#circle.pulse{
+    opacity: 1;
+    display: block;
+    animation: pulse 2s infinite;
 }
 
 @keyframes  pulse {
@@ -66,6 +70,6 @@ circle{
     }
     100% {
         transform: scale(1);
-        /*
+        
     }
 }

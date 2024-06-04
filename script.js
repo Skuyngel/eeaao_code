@@ -1,4 +1,4 @@
-let x = 0; 
+let currentIndex = 0;
 const images = [
     "pictures_green/gp2", "pictures_green/gp3", "pictures_green/gp4", 
     "pictures_green/gp5", "pictures_green/gp6", "pictures_green/gp7", 
@@ -27,25 +27,29 @@ document.addEventListener('DOMContentLoaded', () => {
     [10,12],
   ];
 
-  let currentIndex = 0; 
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('moveButton');
+    const image = document.getElementById('image');
+    const circle = document.getElementById('circle');
 
-  button.addEventListener('click', () => {
-    // Update the image source on button click
-    const nextIndex = (currentIndex + 1) % images.length;
-    image.src = images[nextIndex] + ".png";
+    // Set the initial image source only once when the DOM is fully loaded
+    image.src = images[0] + ".png";
+    image.classList.add(sizes[0]);
 
-    // Update the image size
-    image.classList.remove(...sizes); // Remove all size classes
-    image.classList.add(sizes[nextIndex % sizes.length]); // Add new size class
+    button.addEventListener('click', () => {
+        // Update the circle's position to match the button's position
+        circle.style.gridRow = button.style.gridRow;
+        circle.style.gridColumn = button.style.gridColumn;
 
-    // Get the new position from the array
-    const newPosition = positions[nextIndex];
-    const newRow = newPosition[0];
-    const newColumn = newPosition[1];
+        // Show and animate the circle
+        circle.style.display = 'block';
+        circle.classList.add('pulse');
 
-    // Update the button's position
-    button.style.gridRow = newRow;
-    button.style.gridColumn = newColumn;
+        // Add a delay before changing the image and hiding the circle again
+        setTimeout(() => {
+            // Update the image source
+            const nextIndex = (currentIndex + 1) % images.length;
+            image.src = images[nextIndex] + ".png";
 
     if (images[nextIndex] === "pictures_green/gp10") {
       button.addEventListener('click', redirectToNewPage);
@@ -59,4 +63,27 @@ document.addEventListener('DOMContentLoaded', () => {
 function redirectToNewPage() {
   window.location.href = "newpage.html"; // replace with your new page URL
 }
+});
+=======
+            // Update the image size
+            image.classList.remove(...sizes); // Remove all size classes
+            image.classList.add(sizes[nextIndex % sizes.length]); // Add new size class
+
+            // Get the new position from the array
+            const newPosition = positions[nextIndex];
+            const newRow = newPosition[0];
+            const newColumn = newPosition[1];
+
+            // Update the button's position
+            button.style.gridRow = newRow;
+            button.style.gridColumn = newColumn;
+
+            // Hide the circle again
+            circle.style.display = 'none';
+            circle.classList.remove('pulse');
+
+            // Increment the index to point to the next position
+            currentIndex = nextIndex;
+        }, 2000); // 2000 milliseconds delay (2 seconds)
+    });
 });
