@@ -46,8 +46,14 @@ size: 100vh;
 margin: 1cm;
 }
 
+#circle {
+    opacity: 0;
+    display: none;
+}
 
-#circle{
+#circle.pulse{
+    opacity: 1;
+    display: block;
     animation: pulse 2s infinite;
 }
 

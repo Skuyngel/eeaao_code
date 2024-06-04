@@ -51,3 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
     currentIndex = nextIndex;
   });
 });
+
+//circle should appear only after clicked button (Angi)//
+document.getElementById('moveButton').addEventListener('click', function() {
+    var circle = document.getElementById('circle');
+    circle.style.display = 'block';
+    circle.classList.add('pulse');
+});
