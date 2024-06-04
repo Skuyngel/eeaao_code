@@ -46,11 +46,9 @@ size: 100vh;
 margin: 1cm;
 }
 
-circle{
-}
-/*
+
 #circle{
-    animation: pulse;
+    animation: pulse 2s infinite;
 }
 
 @keyframes  pulse {
@@ -62,6 +60,6 @@ circle{
     }
     100% {
         transform: scale(1);
-        /*
+        
     }
 }
