@@ -11,20 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.getElementById('moveButton');
   const image = document.getElementById('image');
 
-  // Set the initial image source only once when the DOM is fully loaded
+ 
   image.src = images[0] + ".png";
   image.classList.add(sizes[0]);
 
   const positions = [
-    [8, 11],
-    [3, 3],
-    [6, 6],
-    [9, 9],
-    [12, 12],
-    [2, 3],
-    [3, 1],
-    [3, 2],
-    [3, 3]
+    [10,15],
+    [10,12],
+    [10,12],
+    [10,12],
+    [10,12],
+    [10,12],
+    [10,12],
+    [10,12],
+    [10,12],
   ];
 
   let currentIndex = 0; 
@@ -47,7 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
     button.style.gridRow = newRow;
     button.style.gridColumn = newColumn;
 
-    // Increment the index to point to the next position
-    currentIndex = nextIndex;
-  });
+    if (images[nextIndex] === "pictures_green/gp10") {
+      button.addEventListener('click', redirectToNewPage);
+  } else {
+      button.removeEventListener('click', redirectToNewPage);
+  }
+
+  currentIndex = nextIndex;
+});
+
+function redirectToNewPage() {
+  window.location.href = "newpage.html"; // replace with your new page URL
+}
 });
