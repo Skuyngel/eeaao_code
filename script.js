@@ -20,14 +20,18 @@ const positions = [
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('moveButton');
     const image = document.getElementById('image');
+    const circle = document.getElementById('circle');
 
     // Set the initial image source only once when the DOM is fully loaded
     image.src = images[0] + ".png";
     image.classList.add(sizes[0]);
 
     button.addEventListener('click', () => {
+        // Update the circle's position to match the button's position
+        circle.style.gridRow = button.style.gridRow;
+        circle.style.gridColumn = button.style.gridColumn;
+
         // Show and animate the circle
-        const circle = document.getElementById('circle');
         circle.style.display = 'block';
         circle.classList.add('pulse');
 
@@ -59,4 +63,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000); // 2000 milliseconds delay (2 seconds)
     });
 });
-
