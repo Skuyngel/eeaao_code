@@ -57,6 +57,35 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+<<<<<<< HEAD
+=======
+let currentIndex = 0;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('moveButton');
+    const image = document.getElementById('image');
+    const circle = document.getElementById('circle');
+
+    // Set the initial image source only once when the DOM is fully loaded
+    image.src = images[0] + ".png";
+    image.classList.add(sizes[0]);
+
+    button.addEventListener('click', () => {
+        // Update the circle's position to match the button's position
+        circle.style.gridRow = button.style.gridRow;
+        circle.style.gridColumn = button.style.gridColumn;
+
+        // Show and animate the circle
+        circle.style.display = 'block';
+        circle.classList.add('pulse');
+
+        // Add a delay before changing the image and hiding the circle again
+        setTimeout(() => {
+            // Update the image source
+            const nextIndex = (currentIndex + 1) % images.length;
+            image.src = images[nextIndex] + ".png";
+
+>>>>>>> 644e5f2ee5459f0fadb34f034974dae26c3fd304
             // Update the image size
             image.classList.remove(...sizes); // Remove all size classes
             image.classList.add(sizes[nextIndex % sizes.length]); // Add new size class
@@ -78,4 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
             currentIndex = nextIndex;
         }, 2000); // 2000 milliseconds delay (2 seconds)
     });
+<<<<<<< HEAD
   });
+=======
+});
+>>>>>>> 644e5f2ee5459f0fadb34f034974dae26c3fd304
