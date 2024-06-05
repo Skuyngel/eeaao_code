@@ -1,0 +1,30 @@
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.parentcontainer {
+    width: 100%;
+    display: grid;
+    box-sizing: border-box;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+    min-height: calc(100vh);
+}
+
+.button {
+    background-color: rgb(255, 155, 155);
+    position: absolute;
+    display: grid;
+    color: rgb(0, 0, 0);
+    padding: 50px 50px;
+    overflow: hidden;
+}
