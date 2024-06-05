@@ -8,7 +8,7 @@ const positions = [
     { left: '42%', top: '38%' },
     { left: '10%', top: '10%' },
     { left: '70%', top: '20%' },
-    { left: '20%', top: '70%' },
+    { left: '60%', top: '40%' },
 ];
 
 function changeImage() {
@@ -17,22 +17,22 @@ function changeImage() {
     // Set the current image
     document.getElementById('image').src = images[currentIndex];
 
-    // If it's the last image, add click event listener for redirection
-    if (currentIndex === images.length - 1) {
-        document.getElementById('changeButton').addEventListener('click', redirectToNewPage);
-    } else {
-        // Clear the click event listener if not the last image
-        document.getElementById('changeButton').removeEventListener('click', redirectToNewPage);
-    }
-
     const button = document.querySelector('button');
     const newPosition = positions[currentIndex];
     button.style.left = newPosition.left;
     button.style.top = newPosition.top;
+
+    // If it's the last image, make the button visible and enable it
+    if (currentIndex === images.length - 1) {
+        button.style.display = 'block';
+        button.disabled = false;
+    }
 }
 
 function redirectToNewPage() {
-    window.location.href = 'levelEins.html'; // Redirect to the new HTML page
+    if (currentIndex === images.length - 1) {
+        window.location.href = 'levelEins.html'; // Redirect to the new HTML page
+    }
 }
 
 window.onload = function() {
