@@ -23,7 +23,7 @@ function changeImage() {
     // Check if the current image is the last one
     if (currentIndex === images.length - 1) {
         // Redirect to the new HTML page if it's the last image
-        window.location.href = 'newpage.html'; // Replace 'newpage.html' with the actual URL
+        window.location.href = 'newTryOut.html'; // Replace 'newpage.html' with the actual URL
         return; // Exit the function to prevent further code execution
     }
 
