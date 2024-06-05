@@ -7,7 +7,7 @@ const images = [
 
 const sizes = ['image-small', 'image-medium', 'image-medium', 'image-medium', 'image-medium', 'image-medium', 'image-small', 'image-medium', 'image-small', 'image-medium'];
 const positions = [
-    [10, 12],
+    [15, 8],
     [10, 12],
     [10, 12],
     [10, 12],
@@ -45,6 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             // Update the image source
             const nextIndex = (currentIndex + 1) % images.length;
+            
+               // Check if the next image is the last one
+               if (nextIndex === images.length - 1) {
+                // Redirect to the new HTML page if it's the last image
+                window.location.href = 'newpage.html'; // Replace 'newpage.html' with the actual URL
+                return; // Exit the function to prevent further code execution
+            }
+            
             image.src = images[nextIndex] + ".png";
 
             // Update the image size
