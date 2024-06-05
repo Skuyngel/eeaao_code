@@ -5,10 +5,17 @@ const images = [
 ];
 
 const positions = [
-    { left: '42%', top: '38%' },
-    { left: '10%', top: '10%' },
-    { left: '70%', top: '20%' },
     { left: '60%', top: '40%' },
+    { left: '60%', top: '40%' },
+    { left: '60%', top: '40%' },
+    { left: '70%', top: '50%' },
+];
+
+const sizes = [
+    { width: '150px', height: '150px' },
+    { width: '150px', height: '150px' },
+    { width: '150px', height: '150px' },
+    { width: '80px', height: '80px' },
 ];
 
 function changeImage() {
@@ -23,10 +30,13 @@ function changeImage() {
 
         const button = document.querySelector('button');
         const newPosition = positions[currentIndex];
+        const newSize = sizes[currentIndex];
         button.style.left = newPosition.left;
         button.style.top = newPosition.top;
+        button.style.width = newSize.width;
+        button.style.height = newSize.height;
 
-        // If it's the last image, make the button visible and enable it
+        // Show the button only after the last image
         if (currentIndex === images.length - 1) {
             button.style.display = 'block';
             button.disabled = false;
@@ -50,8 +60,11 @@ window.onload = function() {
 
     const button = document.querySelector('button');
     const initialPosition = positions[0];
+    const initialSize = sizes[0];
     button.style.left = initialPosition.left;
     button.style.top = initialPosition.top;
+    button.style.width = initialSize.width;
+    button.style.height = initialSize.height;
 
     // Hide the button initially
     button.style.display = 'none';
