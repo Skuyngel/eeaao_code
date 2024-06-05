@@ -1,8 +1,14 @@
 let currentIndex = 0;
 const images = [
-    "pictures_green/gp2.png", "pictures_green/gp3.png", "pictures_green/gp4.png", 
-    "pictures_green/gp5.png", "pictures_green/gp6.png", "pictures_green/gp7.png", 
-    "pictures_green/gp8.png", "pictures_green/gp9.png", "pictures_green/gp10.png"
+    "pictures_green/gp2.png",
+    "pictures_green/gp3.png",
+    "pictures_green/gp4.png", 
+    "pictures_green/gp5.png",
+    "pictures_green/gp6.png",
+    "pictures_green/gp7.png", 
+    "pictures_green/gp8.png",
+    "pictures_green/gp9.png",
+    "pictures_green/gp10.png"
 ];
 
 const positions = [
@@ -53,23 +59,24 @@ function changeImage() {
             image.src = images[currentIndex];
             image.classList.remove('fade-out');
             image.classList.add('fade-in');
+
+            // Update button and circle position
+            const newPosition = positions[currentIndex];
+            button.style.left = newPosition.left;
+            button.style.top = newPosition.top;
+            circle.style.left = newPosition.left;
+            circle.style.top = newPosition.top;
+
+            // Update button and circle size
+            const newSize = sizes[currentIndex];
+            button.style.width = newSize.width;
+            button.style.height = newSize.height;
+            circle.style.width = newSize.width;
+            circle.style.height = newSize.height;
+
+            // Increment currentIndex after updating the image, position, and size
+            currentIndex = (currentIndex + 1) % images.length;
         }, 250); // 250 milliseconds for fade-out transition
-
-        // Update button and circle position
-        const newPosition = positions[currentIndex];
-        button.style.left = newPosition.left;
-        button.style.top = newPosition.top;
-        circle.style.left = newPosition.left;
-        circle.style.top = newPosition.top;
-
-        // Update button and circle size
-        const newSize = sizes[currentIndex];
-        button.style.width = newSize.width;
-        button.style.height = newSize.height;
-        circle.style.width = newSize.width;
-        circle.style.height = newSize.height;
-
-        currentIndex = (currentIndex + 1) % positions.length;
 
     }, 2000); // 2000 milliseconds delay (2 seconds)
 }
@@ -84,13 +91,14 @@ window.onload = function() {
 
     // Ensure circle is positioned same as button
     const circle = document.getElementById('circle');
-    circle.style.width = button.offsetWidth + 'px';
-    circle.style.height = button.offsetHeight + 'px';
+    const initialSize = sizes[0];
+    button.style.width = initialSize.width;
+    button.style.height = initialSize.height;
+    circle.style.width = initialSize.width;
+    circle.style.height = initialSize.height;
     circle.style.left = initialPosition.left;
     circle.style.top = initialPosition.top;
 
     // Add click event listener to button
     button.addEventListener('click', changeImage);
 };
-
-
