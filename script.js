@@ -30,6 +30,15 @@ function changeImage() {
     const button = document.querySelector('button');
     const circle = document.getElementById('circle');
 
+    // Get the position of the clicked button
+    const buttonRect = button.getBoundingClientRect();
+    const buttonX = buttonRect.left + (buttonRect.width / 2);
+    const buttonY = buttonRect.top + (buttonRect.height / 2);
+
+    // Set circle position to match the button's position
+    circle.style.left = buttonX + 'px';
+    circle.style.top = buttonY + 'px';
+
     // Show and animate the circle
     circle.style.display = 'block';
     circle.classList.add('pulse');
