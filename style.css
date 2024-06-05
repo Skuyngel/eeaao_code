@@ -13,23 +13,17 @@ img{
 
 
 .image-small {
-  grid-row: 12; /* oben unten*/
+  grid-row: 12/20; /* oben unten*/
   grid-column: 1/17; /*thesides*/
 }
 
 .image-medium {
   width: 100%;
   height: auto;
-  grid-row: 11;
+  grid-row: 11/20;
   grid-column: 1/17;
 }
 
-.image-large {
-  width: 100%;
-  height: auto;
-  grid-row: 1/20;
-  grid-column: 4/13;
-}
 
 .parentcontainer{
   display: grid;
