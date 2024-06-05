@@ -20,7 +20,7 @@ const positions = [
     { left: '47.5%', top: '49%' },
     { left: '45%', top: '57%' },
     { left: '49%', top: '26%' },
-    { left: '90%', top: '90%' }
+    { left: '52%', top: '46%' }
 ];
 
 const sizes = [
