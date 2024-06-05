@@ -53,6 +53,7 @@ overflow: hidden;
 #circle {
     opacity: 0;
     display: none;
+    margin: 0;
 }
 
 #circle.pulse{
