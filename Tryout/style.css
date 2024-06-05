@@ -15,8 +15,8 @@ img {
     display: grid;
     box-sizing: border-box;
     align-items: center;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     min-height: calc(100vh);
 }
 
