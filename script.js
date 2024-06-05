@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   image.classList.add(sizes[0]);
 
   const positions = [
-    [10,15],
+    [10,12],
     [10,12],
     [10,12],
     [10,12],
@@ -28,6 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   let currentIndex = 0; 
+
+    // Set the initial button position
+    const initialPosition = positions[0];
+    button.style.gridRow = initialPosition[0];
+    button.style.gridColumn = initialPosition[1];
 
   button.addEventListener('click', () => {
     // Update the image source on button click
