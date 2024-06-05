@@ -42,4 +42,28 @@ window.onload = function() {
     const initialPosition = positions[0];
     button.style.left = initialPosition.left;
     button.style.top = initialPosition.top;
+
+    // Set initial circle position to match the button's position
+    const circle = document.getElementById('circle');
+    circle.style.left = button.style.left;
+    circle.style.top = button.style.top;
+
+    // Add click event listener to button
+    button.addEventListener('click', () => {
+        const circle = document.getElementById('circle');
+
+        // Show and animate the circle
+        circle.style.display = 'block';
+        circle.classList.add('pulse');
+
+        // Add a delay before hiding the circle
+        setTimeout(() => {
+            // Hide the circle again
+            circle.style.display = 'none';
+            circle.classList.remove('pulse');
+
+            // Change image and update button position after hiding the circle
+            changeImage();
+        }, 2000); // 2000 milliseconds delay (2 seconds)
+    });
 };
