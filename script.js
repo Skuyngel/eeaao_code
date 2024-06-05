@@ -7,7 +7,6 @@ const images = [
 
 const sizes = ['image-small', 'image-medium', 'image-medium', 'image-medium', 'image-medium', 'image-medium', 'image-small', 'image-medium', 'image-small', 'image-medium'];
 const positions = [
-    [15, 8],
     [10, 12],
     [10, 12],
     [10, 12],
