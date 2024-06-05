@@ -57,8 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-<<<<<<< HEAD
-=======
 let currentIndex = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -85,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const nextIndex = (currentIndex + 1) % images.length;
             image.src = images[nextIndex] + ".png";
 
->>>>>>> 644e5f2ee5459f0fadb34f034974dae26c3fd304
             // Update the image size
             image.classList.remove(...sizes); // Remove all size classes
             image.classList.add(sizes[nextIndex % sizes.length]); // Add new size class
@@ -107,8 +104,4 @@ document.addEventListener('DOMContentLoaded', () => {
             currentIndex = nextIndex;
         }, 2000); // 2000 milliseconds delay (2 seconds)
     });
-<<<<<<< HEAD
-  });
-=======
 });
->>>>>>> 644e5f2ee5459f0fadb34f034974dae26c3fd304
