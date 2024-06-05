@@ -18,7 +18,7 @@ const positions = [
 ];
 
 function changeImage() {
-    currentIndex = (currentIndex + 1) % images.length;
+    currentIndex = (currentIndex + 2) % images.length;
 
     // Check if the current image is the last one
     if (currentIndex === images.length - 1) {
