@@ -16,10 +16,10 @@ const positions = [
     { left: '54%', top: '45%' },
     { left: '48%', top: '51%' },
     { left: '35%', top: '61%' },
-    { left: '80%', top: '50%' },
-    { left: '30%', top: '80%' },
-    { left: '50%', top: '10%' },
-    { left: '10%', top: '50%' },
+    { left: '69.5%', top: '58.5%' },
+    { left: '47.5%', top: '49%' },
+    { left: '45%', top: '57%' },
+    { left: '49%', top: '26%' },
     { left: '90%', top: '90%' }
 ];
 
@@ -27,11 +27,11 @@ const sizes = [
     { width: '150px', height: '150px' },
     { width: '65px', height: '65px' },
     { width: '23px', height: '23px' },
-    { width: '50px', height: '50px' },
-    { width: '160px', height: '160px' },
-    { width: '210px', height: '210px' },
-    { width: '190px', height: '190px' },
-    { width: '170px', height: '170px' },
+    { width: '49px', height: '49px' },
+    { width: '80px', height: '80px' },
+    { width: '57px', height: '57px' },
+    { width: '110px', height: '110px' },
+    { width: '40px', height: '40px' },
     { width: '230px', height: '230px' }
 ];
 console.log("init");
