@@ -19,7 +19,10 @@ function changeImage() {
 
     // If it's the last image, add click event listener for redirection
     if (currentIndex === images.length - 1) {
-        document.getElementById('image').addEventListener('click', redirectToNewPage);
+        document.getElementById('changeButton').addEventListener('click', redirectToNewPage);
+    } else {
+        // Clear the click event listener if not the last image
+        document.getElementById('changeButton').removeEventListener('click', redirectToNewPage);
     }
 
     const button = document.querySelector('button');
@@ -39,4 +42,12 @@ window.onload = function() {
     const initialPosition = positions[0];
     button.style.left = initialPosition.left;
     button.style.top = initialPosition.top;
+
+    // Set interval to change image every 5 seconds for the first three images
+    const intervalId = setInterval(changeImage, 5000);
+
+    // Clear interval after the last image is shown
+    setTimeout(() => {
+        clearInterval(intervalId);
+    }, (images.length - 1) * 5000);
 };
