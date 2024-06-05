@@ -30,14 +30,24 @@ function changeImage() {
     const button = document.querySelector('button');
     const circle = document.getElementById('circle');
 
+    // Get the size of the button
+    const buttonWidth = button.offsetWidth;
+    const buttonHeight = button.offsetHeight;
+
+    // Set circle size to match the button's size
+    circle.style.width = buttonWidth + 'px';
+    circle.style.height = buttonHeight + 'px';
+
     // Get the position of the clicked button
     const buttonRect = button.getBoundingClientRect();
-    const buttonX = buttonRect.left + (buttonRect.width / 2);
-    const buttonY = buttonRect.top + (buttonRect.height / 2);
+    const buttonCenterX = buttonRect.left + (buttonRect.width / 2);
+    const buttonCenterY = buttonRect.top + (buttonRect.height / 2);
 
-    // Set circle position to match the button's position
-    circle.style.left = buttonX + 'px';
-    circle.style.top = buttonY + 'px';
+    // Set circle position to overlap the button's center
+    const circleLeft = buttonCenterX - (buttonWidth / 2);
+    const circleTop = buttonCenterY - (buttonHeight / 2);
+    circle.style.left = circleLeft + 'px';
+    circle.style.top = circleTop + 'px';
 
     // Show and animate the circle
     circle.style.display = 'block';
@@ -65,12 +75,15 @@ window.onload = function() {
     button.style.left = initialPosition.left;
     button.style.top = initialPosition.top;
 
-    // Set initial circle position to match the button's position
+    // Set initial circle position to overlap the button's center and size to match button's size
     const circle = document.getElementById('circle');
-    circle.style.left = button.style.left;
-    circle.style.top = button.style.top;
+    circle.style.width = button.offsetWidth + 'px';
+    circle.style.height = button.offsetHeight + 'px';
+    const circleLeft = parseFloat(button.style.left) - (button.offsetWidth / 2);
+    const circleTop = parseFloat(button.style.top) - (button.offsetHeight / 2);
+    circle.style.left = circleLeft + 'px';
+    circle.style.top = circleTop + 'px';
 
     // Add click event listener to button
     button.addEventListener('click', changeImage);
 };
-
