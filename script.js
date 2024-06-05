@@ -7,7 +7,7 @@ const images = [
 
 const positions = [
     { left: '44%', top: '40%' },
-    { left: '45%', top: '45%' },
+    { left: '47%', top: '50%' },
     { left: '70%', top: '20%' },
     { left: '20%', top: '70%' },
     { left: '80%', top: '50%' },
@@ -19,8 +19,8 @@ const positions = [
 
 const sizes = [
     { width: '150px', height: '150px' },
-    { width: '200px', height: '200px' },
-    { width: '180px', height: '180px' },
+    { width: '45px', height: '45px' },
+    { width: '23px', height: '23px' },
     { width: '220px', height: '220px' },
     { width: '160px', height: '160px' },
     { width: '210px', height: '210px' },
