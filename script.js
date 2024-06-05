@@ -1,13 +1,19 @@
 let currentIndex = 0;
 const images = [
-    "pictures_green/gp2.png", "pictures_green/gp3.png", "pictures_green/gp4.png", 
-    "pictures_green/gp5.png", "pictures_green/gp6.png", "pictures_green/gp7.png", 
-    "pictures_green/gp8.png", "pictures_green/gp9.png", "pictures_green/gp10.png"
+    "pictures_green/gp2.png",
+    "pictures_green/gp3.png",
+    "pictures_green/gp4.png", 
+    "pictures_green/gp5.png",
+    "pictures_green/gp6.png",
+    "pictures_green/gp7.png", 
+    "pictures_green/gp8.png",
+    "pictures_green/gp9.png",
+    "pictures_green/gp10.png"
 ];
 
 const positions = [
-    { left: '42%', top: '38%' },
-    { left: '10%', top: '10%' },
+    { left: '44%', top: '40%' },
+    { left: '47%', top: '50%' },
     { left: '70%', top: '20%' },
     { left: '20%', top: '70%' },
     { left: '80%', top: '50%' },
@@ -17,37 +23,21 @@ const positions = [
     { left: '90%', top: '90%' }
 ];
 
+const sizes = [
+    { width: '150px', height: '150px' },
+    { width: '45px', height: '45px' },
+    { width: '23px', height: '23px' },
+    { width: '220px', height: '220px' },
+    { width: '160px', height: '160px' },
+    { width: '210px', height: '210px' },
+    { width: '190px', height: '190px' },
+    { width: '170px', height: '170px' },
+    { width: '230px', height: '230px' }
+];
+
 function changeImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-
-    // Check if the current image is the last one
-    if (currentIndex === images.length - 1) {
-        // Redirect to the new HTML page if it's the last image
-        window.location.href = 'levelZwei.html'; // Replace 'newpage.html' with the actual URL
-        return; // Exit the function to prevent further code execution
-    }
-
     const button = document.querySelector('button');
     const circle = document.getElementById('circle');
-
-    // Get the size of the button
-    const buttonWidth = button.offsetWidth;
-    const buttonHeight = button.offsetHeight;
-
-    // Set circle size to match the button's size
-    circle.style.width = buttonWidth + 'px';
-    circle.style.height = buttonHeight + 'px';
-
-    // Get the position of the clicked button
-    const buttonRect = button.getBoundingClientRect();
-    const buttonCenterX = buttonRect.left + (buttonRect.width / 2);
-    const buttonCenterY = buttonRect.top + (buttonRect.height / 2);
-
-    // Set circle position to overlap the button's center
-    const circleLeft = buttonCenterX - (buttonWidth / 2);
-    const circleTop = buttonCenterY - (buttonHeight / 2);
-    circle.style.left = circleLeft + 'px';
-    circle.style.top = circleTop + 'px';
 
     // Show and animate the circle
     circle.style.display = 'block';
@@ -59,22 +49,35 @@ function changeImage() {
         circle.style.display = 'none';
         circle.classList.remove('pulse');
 
-        // Fade out effect
+        // Change image with fade effect
         const image = document.getElementById('image');
-        image.style.transition = 'opacity 0.25s ease';
-        image.style.opacity = 0;
+        image.classList.remove('fade-in');
+        image.classList.add('fade-out');
 
-        // Change image and fade in
         setTimeout(() => {
+            // Update image source
             image.src = images[currentIndex];
-            image.style.transition = 'opacity 0.25s ease';
-            image.style.opacity = 1;
+            image.classList.remove('fade-out');
+            image.classList.add('fade-in');
 
-            // Update button position after hiding the circle
+            // Update button and circle position
             const newPosition = positions[currentIndex];
             button.style.left = newPosition.left;
             button.style.top = newPosition.top;
-        }, 500); // Wait for 0.5 seconds (500 milliseconds) for fade out effect
+            circle.style.left = newPosition.left;
+            circle.style.top = newPosition.top;
+
+            // Update button and circle size
+            const newSize = sizes[currentIndex];
+            button.style.width = newSize.width;
+            button.style.height = newSize.height;
+            circle.style.width = newSize.width;
+            circle.style.height = newSize.height;
+
+            // Increment currentIndex after updating the image, position, and size
+            currentIndex = (currentIndex + 1) % images.length;
+        }, 250); // 250 milliseconds for fade-out transition
+
     }, 2000); // 2000 milliseconds delay (2 seconds)
 }
 
@@ -86,16 +89,16 @@ window.onload = function() {
     button.style.left = initialPosition.left;
     button.style.top = initialPosition.top;
 
-    // Set initial circle position to overlap the button's center and size to match button's size
+    // Ensure circle is positioned same as button
     const circle = document.getElementById('circle');
-    circle.style.width = button.offsetWidth + 'px';
-    circle.style.height = button.offsetHeight + 'px';
-    const circleLeft = parseFloat(button.style.left) - (button.offsetWidth / 2);
-    const circleTop = parseFloat(button.style.top) - (button.offsetHeight / 2);
-    circle.style.left = circleLeft + 'px';
-    circle.style.top = circleTop + 'px';
+    const initialSize = sizes[0];
+    button.style.width = initialSize.width;
+    button.style.height = initialSize.height;
+    circle.style.width = initialSize.width;
+    circle.style.height = initialSize.height;
+    circle.style.left = initialPosition.left;
+    circle.style.top = initialPosition.top;
 
     // Add click event listener to button
     button.addEventListener('click', changeImage);
 };
-
