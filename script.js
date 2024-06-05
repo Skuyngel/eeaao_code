@@ -18,7 +18,7 @@ const positions = [
 ];
 
 function changeImage() {
-    currentIndex = (currentIndex + 2) % images.length;
+    currentIndex = (currentIndex + 1) % images.length;
 
     // Check if the current image is the last one
     if (currentIndex === images.length - 1) {
@@ -27,12 +27,44 @@ function changeImage() {
         return; // Exit the function to prevent further code execution
     }
 
-    document.getElementById('image').src = images[currentIndex];
-
     const button = document.querySelector('button');
-    const newPosition = positions[currentIndex];
-    button.style.left = newPosition.left;
-    button.style.top = newPosition.top;
+    const circle = document.getElementById('circle');
+
+    // Get the size of the button
+    const buttonWidth = button.offsetWidth;
+    const buttonHeight = button.offsetHeight;
+
+    // Set circle size to match the button's size
+    circle.style.width = buttonWidth + 'px';
+    circle.style.height = buttonHeight + 'px';
+
+    // Get the position of the clicked button
+    const buttonRect = button.getBoundingClientRect();
+    const buttonCenterX = buttonRect.left + (buttonRect.width / 2);
+    const buttonCenterY = buttonRect.top + (buttonRect.height / 2);
+
+    // Set circle position to overlap the button's center
+    const circleLeft = buttonCenterX - (buttonWidth / 2);
+    const circleTop = buttonCenterY - (buttonHeight / 2);
+    circle.style.left = circleLeft + 'px';
+    circle.style.top = circleTop + 'px';
+
+    // Show and animate the circle
+    circle.style.display = 'block';
+    circle.classList.add('pulse');
+
+    // Add a delay before changing the image, hiding the circle, and updating button position
+    setTimeout(() => {
+        // Hide the circle
+        circle.style.display = 'none';
+        circle.classList.remove('pulse');
+
+        // Change image and update button position after hiding the circle
+        document.getElementById('image').src = images[currentIndex];
+        const newPosition = positions[currentIndex];
+        button.style.left = newPosition.left;
+        button.style.top = newPosition.top;
+    }, 2000); // 2000 milliseconds delay (2 seconds)
 }
 
 window.onload = function() {
@@ -43,27 +75,15 @@ window.onload = function() {
     button.style.left = initialPosition.left;
     button.style.top = initialPosition.top;
 
-    // Set initial circle position to match the button's position
+    // Set initial circle position to overlap the button's center and size to match button's size
     const circle = document.getElementById('circle');
-    circle.style.left = button.style.left;
-    circle.style.top = button.style.top;
+    circle.style.width = button.offsetWidth + 'px';
+    circle.style.height = button.offsetHeight + 'px';
+    const circleLeft = parseFloat(button.style.left) - (button.offsetWidth / 2);
+    const circleTop = parseFloat(button.style.top) - (button.offsetHeight / 2);
+    circle.style.left = circleLeft + 'px';
+    circle.style.top = circleTop + 'px';
 
     // Add click event listener to button
-    button.addEventListener('click', () => {
-        const circle = document.getElementById('circle');
-
-        // Show and animate the circle
-        circle.style.display = 'block';
-        circle.classList.add('pulse');
-
-        // Add a delay before hiding the circle
-        setTimeout(() => {
-            // Hide the circle again
-            circle.style.display = 'none';
-            circle.classList.remove('pulse');
-
-            // Change image and update button position after hiding the circle
-            changeImage();
-        }, 2000); // 2000 milliseconds delay (2 seconds)
-    });
+    button.addEventListener('click', changeImage);
 };
