@@ -44,10 +44,10 @@ window.onload = function() {
     button.style.top = initialPosition.top;
 
     // Set interval to change image every 5 seconds for the first three images
-    const intervalId = setInterval(changeImage, 5000);
+    const intervalId = setInterval(changeImage, 3000);
 
     // Clear interval after the last image is shown
     setTimeout(() => {
         clearInterval(intervalId);
-    }, (images.length - 1) * 5000);
+    }, (images.length - 1) * 3000);
 };
