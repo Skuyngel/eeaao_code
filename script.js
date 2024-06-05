@@ -7,7 +7,7 @@ const images = [
 
 const positions = [
     { left: '44%', top: '40%' },
-    { left: '10%', top: '10%' },
+    { left: '50%', top: '50%' },
     { left: '70%', top: '20%' },
     { left: '20%', top: '70%' },
     { left: '80%', top: '50%' },
@@ -18,36 +18,8 @@ const positions = [
 ];
 
 function changeImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-
-    // Check if the current image is the last one
-    if (currentIndex === images.length - 1) {
-        // Redirect to the new HTML page if it's the last image
-        window.location.href = 'levelZwei.html'; // Replace 'newpage.html' with the actual URL
-        return; // Exit the function to prevent further code execution
-    }
-
     const button = document.querySelector('button');
     const circle = document.getElementById('circle');
-
-    // Get the size of the button
-    const buttonWidth = button.offsetWidth;
-    const buttonHeight = button.offsetHeight;
-
-    // Set circle size to match the button's size
-    circle.style.width = buttonWidth + 'px';
-    circle.style.height = buttonHeight + 'px';
-
-    // Get the position of the clicked button
-    const buttonRect = button.getBoundingClientRect();
-    const buttonCenterX = buttonRect.left + (buttonRect.width / 2);
-    const buttonCenterY = buttonRect.top + (buttonRect.height / 2);
-
-    // Set circle position to overlap the button's center
-    const circleLeft = buttonCenterX - (buttonWidth / 2);
-    const circleTop = buttonCenterY - (buttonHeight / 2);
-    circle.style.left = circleLeft + 'px';
-    circle.style.top = circleTop + 'px';
 
     // Show and animate the circle
     circle.style.display = 'block';
@@ -59,22 +31,27 @@ function changeImage() {
         circle.style.display = 'none';
         circle.classList.remove('pulse');
 
-        // Fade out effect
+        // Change image with fade effect
         const image = document.getElementById('image');
-        image.style.transition = 'opacity 0.25s ease';
-        image.style.opacity = 0;
+        image.classList.remove('fade-in');
+        image.classList.add('fade-out');
 
-        // Change image and fade in
         setTimeout(() => {
+            // Update image source
             image.src = images[currentIndex];
-            image.style.transition = 'opacity 0.25s ease';
-            image.style.opacity = 1;
+            image.classList.remove('fade-out');
+            image.classList.add('fade-in');
+        }, 250); // 250 milliseconds for fade-out transition
 
-            // Update button position after hiding the circle
-            const newPosition = positions[currentIndex];
-            button.style.left = newPosition.left;
-            button.style.top = newPosition.top;
-        }, 500); // Wait for 0.5 seconds (500 milliseconds) for fade out effect
+        // Update button and circle position
+        const newPosition = positions[currentIndex];
+        button.style.left = newPosition.left;
+        button.style.top = newPosition.top;
+        circle.style.left = newPosition.left;
+        circle.style.top = newPosition.top;
+
+        currentIndex = (currentIndex + 1) % positions.length;
+
     }, 2000); // 2000 milliseconds delay (2 seconds)
 }
 
@@ -86,16 +63,15 @@ window.onload = function() {
     button.style.left = initialPosition.left;
     button.style.top = initialPosition.top;
 
-    // Set initial circle position to overlap the button's center and size to match button's size
+    // Ensure circle is positioned same as button
     const circle = document.getElementById('circle');
     circle.style.width = button.offsetWidth + 'px';
     circle.style.height = button.offsetHeight + 'px';
-    const circleLeft = parseFloat(button.style.left) - (button.offsetWidth / 2);
-    const circleTop = parseFloat(button.style.top) - (button.offsetHeight / 2);
-    circle.style.left = circleLeft + 'px';
-    circle.style.top = circleTop + 'px';
+    circle.style.left = initialPosition.left;
+    circle.style.top = initialPosition.top;
 
     // Add click event listener to button
     button.addEventListener('click', changeImage);
 };
+
 

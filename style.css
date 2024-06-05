@@ -66,3 +66,15 @@ button {
         
     }
 }
+
+/* CSS for fade-in and fade-out */
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.25s ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}
+
