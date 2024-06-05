@@ -6,7 +6,7 @@ const images = [
 ];
 
 const positions = [
-    { left: '50%', top: '50%' },
+    { left: '44%', top: '40%' },
     { left: '10%', top: '10%' },
     { left: '70%', top: '20%' },
     { left: '20%', top: '70%' },
