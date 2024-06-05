@@ -17,6 +17,18 @@ const positions = [
     { left: '90%', top: '90%' }
 ];
 
+const sizes = [
+    { width: '150px', height: '150px' },
+    { width: '200px', height: '200px' },
+    { width: '180px', height: '180px' },
+    { width: '220px', height: '220px' },
+    { width: '160px', height: '160px' },
+    { width: '210px', height: '210px' },
+    { width: '190px', height: '190px' },
+    { width: '170px', height: '170px' },
+    { width: '230px', height: '230px' }
+];
+
 function changeImage() {
     const button = document.querySelector('button');
     const circle = document.getElementById('circle');
@@ -49,6 +61,13 @@ function changeImage() {
         button.style.top = newPosition.top;
         circle.style.left = newPosition.left;
         circle.style.top = newPosition.top;
+
+        // Update button and circle size
+        const newSize = sizes[currentIndex];
+        button.style.width = newSize.width;
+        button.style.height = newSize.height;
+        circle.style.width = newSize.width;
+        circle.style.height = newSize.height;
 
         currentIndex = (currentIndex + 1) % positions.length;
 
