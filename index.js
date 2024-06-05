@@ -8,7 +8,7 @@ const positions = [
     { left: '60%', top: '40%' },
     { left: '60%', top: '40%' },
     { left: '60%', top: '40%' },
-    { left: '70%', top: '50%' },
+    { left: '71%', top: '51%' },
 ];
 
 const sizes = [
