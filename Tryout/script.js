@@ -20,6 +20,14 @@ const positions = [
 
 function changeImage() {
     currentIndex = (currentIndex + 1) % images.length;
+
+    // Check if the current image is the last one
+    if (currentIndex === images.length - 1) {
+        // Redirect to the new HTML page if it's the last image
+        window.location.href = 'newTryOut.html'; // Replace 'newpage.html' with the actual URL
+        return; // Exit the function to prevent further code execution
+    }
+
     document.getElementById('image').src = images[currentIndex];
 
     const button = document.querySelector('button');
