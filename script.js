@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-/*
+
 =======
             // Update the image size
             image.classList.remove(...sizes); // Remove all size classes
@@ -81,4 +81,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000); // 2000 milliseconds delay (2 seconds)
     });
 });
-*/
