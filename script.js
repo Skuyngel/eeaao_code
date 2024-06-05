@@ -34,10 +34,14 @@ const sizes = [
     { width: '170px', height: '170px' },
     { width: '230px', height: '230px' }
 ];
-
+console.log("init");
 function changeImage() {
+    console.log("changeImage");
+    console.log(currentIndex);
     const button = document.querySelector('button');
     const circle = document.getElementById('circle');
+
+    
 
     // Show and animate the circle
     circle.style.display = 'block';
