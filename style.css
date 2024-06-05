@@ -1,48 +1,42 @@
-
 body {
-  background-color:  #000000;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
-img{
-  width: 100%;
-  height: auto;
+img {
+    width: 100%;
+    height: auto;
+}
+
+.parentcontainer {
+    width: 100%;
+    display: grid;
+    box-sizing: border-box;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    min-height: calc(100vh);
+}
+
+button {
+    position: absolute;
+    z-index: 30;
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    background: transparent;
+    border-radius: 100%;
+    left: 42%;
+    top: 38%;
+    transition: all 2s ease;
 }
 
 
-.image-small {
-  grid-row: 12/20; /* oben unten*/
-  grid-column: 1/17; /*thesides*/
-}
+/*.buttonfather{
+}*/
 
-.image-medium {
-  width: 100%;
-  height: auto;
-  grid-row: 11/20;
-  grid-column: 1/17;
-}
-
-
-.parentcontainer{
-  display: grid;
-   box-sizing: border-box;
-   position: relative; 
-   gap: 5px;
-   grid-template-columns: repeat(16, auto);
-   grid-template-rows: repeat(24, auto);
-  min-height:calc(100vh);
-}
-
-.button{
-  background-color: rgb(255, 155, 155);
-position: absolute;
-display: grid;
-color: aqua;
-padding: 50px 50px;
-overflow: hidden;
-}
 
 #circle {
     opacity: 0;
