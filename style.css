@@ -20,6 +20,11 @@ img {
     min-height: calc(100vh);
 }
 
+.text {
+size: 60px;
+color: aliceblue;
+}
+
 button {
     position: absolute;
     z-index: 30;
