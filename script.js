@@ -1,63 +1,22 @@
-let x = 0; 
+let currentIndex = 0;
 const images = [
     "pictures_green/gp2", "pictures_green/gp3", "pictures_green/gp4", 
     "pictures_green/gp5", "pictures_green/gp6", "pictures_green/gp7", 
     "pictures_green/gp8", "pictures_green/gp9", "pictures_green/gp10"
 ];
 
-const sizes = ['image-small', 'image-medium', 'image-medium', 'image-medium', 'image-medium','image-medium', 'image-small', 'image-medium','image-small', 'image-medium',];
-
-document.addEventListener('DOMContentLoaded', () => {
-  const button = document.getElementById('moveButton');
-  const image = document.getElementById('image');
-
- 
-  image.src = images[0] + ".png";
-  image.classList.add(sizes[0]);
-
-  const positions = [
-    [10,12],
-    [10,12],
-    [10,12],
-    [10,12],
-    [10,12],
-    [10,12],
-    [10,12],
-    [10,12],
-    [10,12],
-  ];
-
-  let currentIndex = 0; 
-
-    // Set the initial button position
-    const initialPosition = positions[0];
-    button.style.gridRow = initialPosition[0];
-    button.style.gridColumn = initialPosition[1];
-
-  button.addEventListener('click', () => {
-    // Update the image source on button click
-    const nextIndex = (currentIndex + 1) % images.length;
-    image.src = images[nextIndex] + ".png";
-
-    // Update the image size
-    image.classList.remove(...sizes); // Remove all size classes
-    image.classList.add(sizes[nextIndex % sizes.length]); // Add new size class
-
-    // Get the new position from the array
-    const newPosition = positions[nextIndex];
-    const newRow = newPosition[0];
-    const newColumn = newPosition[1];
-
-    // Update the button's position
-    button.style.gridRow = newRow;
-    button.style.gridColumn = newColumn;
-
-    // Increment the index to point to the next position
-    currentIndex = nextIndex;
-  });
-});
-
-let currentIndex = 0;
+const sizes = ['image-small', 'image-medium', 'image-medium', 'image-medium', 'image-medium', 'image-medium', 'image-small', 'image-medium', 'image-small', 'image-medium'];
+const positions = [
+    [10, 12],
+    [10, 12],
+    [10, 12],
+    [10, 12],
+    [10, 12],
+    [10, 12],
+    [10, 12],
+    [10, 12],
+    [10, 12],
+];
 
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('moveButton');
@@ -67,6 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set the initial image source only once when the DOM is fully loaded
     image.src = images[0] + ".png";
     image.classList.add(sizes[0]);
+
+    // Set the initial button position
+    const initialPosition = positions[0];
+    button.style.gridRow = initialPosition[0];
+    button.style.gridColumn = initialPosition[1];
 
     button.addEventListener('click', () => {
         // Update the circle's position to match the button's position
@@ -105,3 +69,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000); // 2000 milliseconds delay (2 seconds)
     });
 });
+
