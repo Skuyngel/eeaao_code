@@ -59,11 +59,22 @@ function changeImage() {
         circle.style.display = 'none';
         circle.classList.remove('pulse');
 
-        // Change image and update button position after hiding the circle
-        document.getElementById('image').src = images[currentIndex];
-        const newPosition = positions[currentIndex];
-        button.style.left = newPosition.left;
-        button.style.top = newPosition.top;
+        // Fade out effect
+        const image = document.getElementById('image');
+        image.style.transition = 'opacity 0.25s ease';
+        image.style.opacity = 0;
+
+        // Change image and fade in
+        setTimeout(() => {
+            image.src = images[currentIndex];
+            image.style.transition = 'opacity 0.25s ease';
+            image.style.opacity = 1;
+
+            // Update button position after hiding the circle
+            const newPosition = positions[currentIndex];
+            button.style.left = newPosition.left;
+            button.style.top = newPosition.top;
+        }, 500); // Wait for 0.5 seconds (500 milliseconds) for fade out effect
     }, 2000); // 2000 milliseconds delay (2 seconds)
 }
 
@@ -87,3 +98,4 @@ window.onload = function() {
     // Add click event listener to button
     button.addEventListener('click', changeImage);
 };
+
