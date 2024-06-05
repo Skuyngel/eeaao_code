@@ -1,6 +1,6 @@
 let currentIndex = 0;
 const images = [
-    "pictures_intro/ip1.png","pictures_intro/ip2.png", "pictures_intro/ip3.png", 
+    "pictures_intro/ip1.png", "pictures_intro/ip2.png", "pictures_intro/ip3.png", 
     "pictures_intro/ip4.png" 
 ];
 
@@ -20,6 +20,7 @@ const sizes = [
 
 function changeImage() {
     const image = document.getElementById('image');
+    const text = document.querySelector('.text'); // Get the text element
     image.style.transition = 'opacity 0.25s ease-in-out';
     image.style.opacity = 0; 
 
@@ -40,8 +41,10 @@ function changeImage() {
         if (currentIndex === images.length - 1) {
             button.style.display = 'block';
             button.disabled = false;
+            text.style.display = 'block'; // Show the text on the last picture
         } else {
             button.style.display = 'none';
+            text.style.display = 'none'; // Hide the text on other pictures
         }
 
         image.style.opacity = 1;
