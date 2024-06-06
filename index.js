@@ -15,7 +15,7 @@ const sizes = [
     { width: '150px', height: '150px' },
     { width: '150px', height: '150px' },
     { width: '150px', height: '150px' },
-    { width: '60px', height: '60px' }
+    { width: '70px', height: '70px' } // Changed to match button size
 ];
 
 function changeImage() {
@@ -38,6 +38,11 @@ function changeImage() {
         button.style.top = newPosition.top;
         button.style.width = newSize.width;
         button.style.height = newSize.height;
+
+        circle.style.left = newPosition.left; // Set circle's position to match the button's position
+        circle.style.top = newPosition.top;
+        circle.style.width = newSize.width; // Set circle's size to match the button's size
+        circle.style.height = newSize.height;
 
         if (currentIndex === images.length - 1) {
             button.style.display = 'block';
@@ -94,3 +99,4 @@ window.onload = function() {
         clearInterval(intervalId);
     }, (images.length - 1) * 3000);
 };
+
