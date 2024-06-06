@@ -1,14 +1,10 @@
 let currentIndex = 0;
 const images = [
-    "pictures_purple/pp1.png",
-    "pictures_purple/pp2.png",
-    "pictures_purple/pp3.png", 
-    "pictures_purple/pp4.png",
-    "pictures_purple/pp5.png",
-    "pictures_purple/pp6.png", 
-    "pictures_purple/pp7.png",
-    "pictures_purple/pp8.png",
-    "pictures_purple/pp9.png",
+    "pictures_greenpurple/gpp1.png",
+    "pictures_greenpurple/gpp2.png",
+    "pictures_greenpurple/gpp3.png",
+    "pictures_greenpurple/gpp4.png",
+    "pictures_greenpurple/gpp5.png"
 ];
 
 const positions = [
@@ -16,11 +12,7 @@ const positions = [
     { left: '4%', top: '72%' },
     { left: '21%', top: '53%' },
     { left: '54%', top: '51%' },
-    { left: '48%', top: '36%' },
-    { left: '47%', top: '48%' },
-    { left: '43%', top: '40%' },
-    { left: '62%', top: '27%' },
-    { left: '27%', top: '10%' }
+    { left: '48%', top: '36%' }
 ];
 
 const sizes = [
@@ -28,11 +20,7 @@ const sizes = [
     { width: '15px', height: '15px' },
     { width: '120px', height: '120px' },
     { width: '90px', height: '90px' },
-    { width: '170px', height: '170px' },
-    { width: '70px', height: '70px' },
-    { width: '45px', height: '45px' },
-    { width: '80px', height: '80px' },
-    { width: '500px', height: '500px' }
+    { width: '170px', height: '170px' }
 ];
 
 console.log("init");
@@ -83,7 +71,7 @@ function changeImage() {
 
             
             if (currentIndex === 0) { 
-                window.location.href = 'levelVier.html'; 
+                window.location.href = 'levelFünf.html'; 
             }
         }, 250); 
 
