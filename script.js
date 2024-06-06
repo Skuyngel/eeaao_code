@@ -35,6 +35,39 @@ const sizes = [
     { width: '230px', height: '230px' }
 ];
 
+const divPositions = [
+    { left: '45.5%', top: '42%' },
+    { left: '54%', top: '45%' },
+    { left: '45.5%', top: '42%' },
+    { left: '54%', top: '45%' },
+    { left: '45.5%', top: '42%' },
+    { left: '54%', top: '45%' },
+    { left: '45.5%', top: '42%' },
+    { left: '54%', top: '45%' },
+    { left: '45.5%', top: '42%' }
+    // Add more positions as needed
+];
+
+const divSizes = [
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    // Add more sizes as needed
+];
+
+const phrases = [
+    "Try again!", "Wrong circle", "Nu-uh", "Nope.", 
+    "Try harder", "That's not it.", "Almost.", 
+    "Not quite.", "Nice try."
+];
+
+
 console.log("init");
 
 function changeImage() {
