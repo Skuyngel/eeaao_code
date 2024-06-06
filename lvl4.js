@@ -1,7 +1,7 @@
 currentIndex = 0;
 const images = [
     "pictures_greenrose/grp1.png",
-    "pictures_greenrose/grprp2.png",
+    "pictures_greenrose/grp2.png",
     "pictures_greenrose/grp3.png", 
     "pictures_greenrose/grprp4.png",
     "pictures_greenrose/grp5.png",
@@ -11,7 +11,7 @@ const images = [
 
 const positions = [
     { left: '52.4%', top: '52.3%' },
-    { left: '65.5%', top: '49%' },
+    { left: '40.5%', top: '63.5%' },
     { left: '42.5%', top: '44%' },
     { left: '64%', top: '19%' },
     { left: '51%', top: '25.75%' },
@@ -21,7 +21,7 @@ const positions = [
 
 const sizes = [
     { width: '95px', height: '95px' },
-    { width: '80px', height: '80px' },
+    { width: '30px', height: '30px' },
     { width: '140px', height: '140px' },
     { width: '77px', height: '77px' },
     { width: '60px', height: '60px' },
