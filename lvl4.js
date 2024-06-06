@@ -3,7 +3,7 @@ const images = [
     "pictures_greenrose/grp1.png",
     "pictures_greenrose/grp2.png",
     "pictures_greenrose/grp3.png", 
-    "pictures_greenrose/grprp4.png",
+    "pictures_greenrose/grp4.png",
     "pictures_greenrose/grp5.png",
     "pictures_greenrose/grp6.png", 
     "pictures_greenrose/grp7.png"
@@ -13,7 +13,7 @@ const positions = [
     { left: '52.4%', top: '52.3%' },
     { left: '40.5%', top: '63.5%' },
     { left: '32.5%', top: '34.5%' },
-    { left: '64%', top: '19%' },
+    { left: '47%', top: '36%' },
     { left: '51%', top: '25.75%' },
     { left: '56%', top: '37.75%' },
     { left: '54.5%', top: '51.5%' }
@@ -23,7 +23,7 @@ const sizes = [
     { width: '95px', height: '95px' },
     { width: '30px', height: '30px' },
     { width: '100px', height: '100px' },
-    { width: '77px', height: '77px' },
+    { width: '70px', height: '70px' },
     { width: '60px', height: '60px' },
     { width: '30px', height: '30px' },
     { width: '32px', height: '32px' }
