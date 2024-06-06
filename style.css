@@ -147,7 +147,6 @@ font-weight: 400;
         background-color: transparent;
         border: 3px solid yellow;
         border-radius: 100%;
-        user-select: none;
         z-index: 30;
     
     }
