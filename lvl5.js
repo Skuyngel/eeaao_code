@@ -8,19 +8,19 @@ const images = [
 ];
 
 const positions = [
-    { left: '37%', top: '50%' },
-    { left: '4%', top: '72%' },
-    { left: '21%', top: '53%' },
-    { left: '54%', top: '51%' },
-    { left: '48%', top: '36%' }
+    { left: '80%', top: '25%' },
+    { left: '68%', top: '42.5%' },
+    { left: '45%', top: '35%' },
+    { left: '92%', top: '32%' },
+    { left: '83%', top: '22%' }
 ];
 
 const sizes = [
-    { width: '280px', height: '280px' },
-    { width: '15px', height: '15px' },
-    { width: '120px', height: '120px' },
+    { width: '220px', height: '220px' },
+    { width: '25px', height: '25px' },
     { width: '90px', height: '90px' },
-    { width: '170px', height: '170px' }
+    { width: '15px', height: '15px' },
+    { width: '130px', height: '130px' }
 ];
 
 console.log("init");
