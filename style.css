@@ -82,6 +82,7 @@ font-weight: 400;
     font-size: 40px;
     color: white; 
     position: absolute; 
+    max-width: 40vw;
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, 50%); 
@@ -94,13 +95,14 @@ font-weight: 400;
     font-family: minion-pro, serif;
     font-style: normal;
     font-weight: 400;
-        font-size: 30px;
-        text-align: center;
-        color: white; 
-        position: absolute; 
-        top: 35%; 
+    font-size: 30px;
+    text-align: center;
+    color: white; 
+    position: absolute; 
+    top: 35%; 
         left: 52%; 
         transform: translate(-50%, 50%); 
         z-index: 6; 
         display: none;
+        
     }

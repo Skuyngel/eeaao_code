@@ -16,7 +16,7 @@ const sizes = [
     { width: '150px', height: '150px' },
     { width: '150px', height: '150px' },
     { width: '150px', height: '150px' },
-    { width: '80px', height: '80px' },
+    { width: '60px', height: '60px' },
 ];
 
 function changeImage() {
