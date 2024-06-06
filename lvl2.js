@@ -33,7 +33,7 @@ const sizes = [
 ];
 
 const divPositions = [
-    { left: '20%', top: '70%' },
+    { left: '20%', top: '20%' },
     { left: '28%', top: '53%' },
     { left: '75%', top: '70%' },
     { left: '32%', top: '59.5%' },
@@ -46,7 +46,7 @@ const divPositions = [
 ];
 
 const divSizes = [
-    { width: '0px', height: '0px' },
+    { width: '50px', height: '50px' },
     { width: '250px', height: '250px' },
     { width: '200px', height: '200px' },
     { width: '40px', height: '40px' },
@@ -117,6 +117,7 @@ function changeImage() {
 
             // Update the position and size of the wrongDiv
             updateWrongDiv();
+
             // Check if it is the last image and redirect if true
             if (currentIndex === 0) { // This means it has looped back to the first image
                 window.location.href = 'levelDrei.html'; 
