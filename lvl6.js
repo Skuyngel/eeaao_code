@@ -27,7 +27,7 @@ const sizesButton1 = [
 ];
 
 const positionsButton2 = [
-    { left: '10%', top: '70%' },
+    { left: '80%', top: '70%' },
     { left: '20%', top: '40%' },
     { left: '50%', top: '30%' },
     { left: '80%', top: '20%' },
