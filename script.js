@@ -53,7 +53,7 @@ const divSizes = [
     { width: '250px', height: '250px' },
     { width: '200px', height: '200px' },
     { width: '40px', height: '40px' },
-    { width: '200px', height: '200px' },
+    { width: '0px', height: '0px' },
     { width: '200px', height: '200px' },
     { width: '200px', height: '200px' },
     { width: '200px', height: '200px' },
