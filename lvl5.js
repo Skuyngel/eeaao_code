@@ -1,10 +1,11 @@
 let currentIndex = 0;
 const images = [
-    "pictures_greenpurple/gpp1.png",
-    "pictures_greenpurple/gpp2.png",
-    "pictures_greenpurple/gpp3.png",
-    "pictures_greenpurple/gpp4.png",
-    "pictures_greenpurple/gpp5.png"
+    "pictures_rosepurple/rpp1.png",
+    "pictures_rosepurple/rpp2.png",
+    "pictures_rosepurple/rpp3.png",
+    "pictures_rosepurple/rpp4.png",
+    "pictures_rosepurple/rpp5.png",
+    "pictures_rosepurple/rpp6.png"
 ];
 
 const positions = [
