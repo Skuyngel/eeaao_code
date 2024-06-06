@@ -37,7 +37,7 @@ const sizes = [
 
 const divPositions = [
     { left: '20%', top: '70%' },
-    { left: '54%', top: '45%' },
+    { left: '28%', top: '53%' },
     { left: '45.5%', top: '42%' },
     { left: '54%', top: '45%' },
     { left: '45.5%', top: '42%' },
@@ -50,7 +50,7 @@ const divPositions = [
 
 const divSizes = [
     { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
+    { width: '250px', height: '250px' },
     { width: '200px', height: '200px' },
     { width: '200px', height: '200px' },
     { width: '200px', height: '200px' },
