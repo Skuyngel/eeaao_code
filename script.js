@@ -36,7 +36,7 @@ const sizes = [
 ];
 
 const divPositions = [
-    { left: '45.5%', top: '42%' },
+    { left: '20%', top: '70%' },
     { left: '54%', top: '45%' },
     { left: '45.5%', top: '42%' },
     { left: '54%', top: '45%' },
@@ -144,3 +144,37 @@ window.onload = function() {
     // Add click event listener to button
     button.addEventListener('click', changeImage);
 };
+
+const wrongDiv = document.getElementById('wrong');
+
+    // Add click event listener to wrongDiv
+    wrongDiv.addEventListener('click', () => {
+        // Select a random phrase from the phrases array
+        const randomIndex = Math.floor(Math.random() * phrases.length);
+        const randomPhrase = phrases[randomIndex];
+
+        // Display the random phrase in the wrongDiv
+        wrongDiv.innerText = randomPhrase;
+
+        // Clear the text after a certain duration (e.g., 2 seconds)
+        setTimeout(() => {
+            wrongDiv.innerText = '';
+        }, 2000);
+    });
+
+    // Function to update the position and size of the wrongDiv
+    function updateWrongDiv() {
+        const currentPosIndex = currentIndex % divPositions.length;
+        const currentSizeIndex = currentIndex % divSizes.length;
+
+        // Update position
+        wrongDiv.style.left = divPositions[currentPosIndex].left;
+        wrongDiv.style.top = divPositions[currentPosIndex].top;
+
+        // Update size
+        wrongDiv.style.width = divSizes[currentSizeIndex].width;
+        wrongDiv.style.height = divSizes[currentSizeIndex].height;
+    }
+
+    // Call the function initially
+    updateWrongDiv();
