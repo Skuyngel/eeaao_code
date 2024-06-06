@@ -34,14 +34,14 @@ const sizes = [
     { width: '40px', height: '40px' },
     { width: '230px', height: '230px' }
 ];
+
 console.log("init");
+
 function changeImage() {
     console.log("changeImage");
     console.log(currentIndex);
     const button = document.querySelector('button');
     const circle = document.getElementById('circle');
-
-    
 
     // Show and animate the circle
     circle.style.display = 'block';
@@ -59,6 +59,9 @@ function changeImage() {
         image.classList.add('fade-out');
 
         setTimeout(() => {
+            // Increment currentIndex before updating the image, position, and size
+            currentIndex = (currentIndex + 1) % images.length;
+
             // Update image source
             image.src = images[currentIndex];
             image.classList.remove('fade-out');
@@ -78,8 +81,10 @@ function changeImage() {
             circle.style.width = newSize.width;
             circle.style.height = newSize.height;
 
-            // Increment currentIndex after updating the image, position, and size
-            currentIndex = (currentIndex + 1) % images.length;
+            // Check if it is the last image and redirect if true
+            if (currentIndex === 0) { // This means it has looped back to the first image
+                window.location.href = 'levelZwei.html'; 
+            }
         }, 250); // 250 milliseconds for fade-out transition
 
     }, 2000); // 2000 milliseconds delay (2 seconds)
