@@ -19,13 +19,13 @@ img {
     grid-template-rows: 1fr;
     min-height: calc(100vh);
 }
-
+/*
 .text {
 size: 100px;
 color: aliceblue;
 z-index: 30;
 }
-
+*/
 button {
     position: absolute;
     z-index: 30;
