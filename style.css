@@ -19,13 +19,7 @@ img {
     grid-template-rows: 1fr;
     min-height: calc(100vh);
 }
-/*
-.text {
-size: 100px;
-color: aliceblue;
-z-index: 30;
-}
-*/
+
 button {
     position: absolute;
     z-index: 30;
@@ -42,10 +36,6 @@ button {
 #changeButton {
     display: none;
 }
-
-/*.buttonfather{
-}*/
-
 
 #circle {
     opacity: 0;
@@ -98,3 +88,19 @@ font-weight: 400;
     z-index: 1; 
     display: none;
 }
+
+/*for the epiloge*/
+.epi {
+    font-family: minion-pro, serif;
+    font-style: normal;
+    font-weight: 400;
+        font-size: 30px;
+        text-align: center;
+        color: white; 
+        position: absolute; 
+        top: 35%; 
+        left: 52%; 
+        transform: translate(-50%, 50%); 
+        z-index: 6; 
+        display: none;
+    }
