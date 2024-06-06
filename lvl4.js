@@ -30,28 +30,24 @@ const sizes = [
 ];
 
 const divPositions = [
-    { left: '20%', top: '70%' },
-    { left: '28%', top: '53%' },
-    { left: '75%', top: '70%' },
-    { left: '32%', top: '59.5%' },
-    { left: '45.5%', top: '42%' },
-    { left: '54%', top: '45%' },
-    { left: '45.5%', top: '42%' },
-    { left: '54%', top: '45%' },
-    { left: '45.5%', top: '42%' }
+    { left: '67%', top: '35%' },
+    { left: '0%', top: '0%' },
+    { left: '50%', top: '17%' },
+    { left: '25%', top: '19%' },
+    { left: '42%', top: '40%' },
+    { left: '14%', top: '45%' },
+    { left: '45.5%', top: '15%' }
     // Add more positions as needed
 ];
 
 const divSizes = [
+    { width: '350px', height: '400px' },
     { width: '0px', height: '0px' },
-    { width: '250px', height: '250px' },
-    { width: '200px', height: '200px' },
-    { width: '40px', height: '40px' },
     { width: '200px', height: '200px' },
     { width: '200px', height: '200px' },
     { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
+    { width: '900px', height: '400px' },
+    { width: '200px', height: '200px' }
     // Add more sizes as needed
 ];
 
@@ -117,7 +113,7 @@ function changeImage() {
 
             // Check if it is the last image and redirect if true
             if (currentIndex === 0) { // This means it has looped back to the first image
-                window.location.href = 'levelZwei.html'; 
+                window.location.href = 'levelFünf.html'; 
             }
         }, 250); // 250 milliseconds for fade-out transition
 
