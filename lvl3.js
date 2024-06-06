@@ -1,35 +1,38 @@
-currentIndex = 0;
+let currentIndex = 0;
 const images = [
-    "pictures_rose/rp1.png",
-    "pictures_rose/rp2.png",
-    "pictures_rose/rp3.png", 
-    "pictures_rose/rp4.png",
-    "pictures_rose/rp5.png",
-    "pictures_rose/rp6.png", 
-    "pictures_rose/rp7.png",
-    "pictures_rose/rp8.png"
+    "pictures_purple/pp1.png",
+    "pictures_purple/pp2.png",
+    "pictures_purple/pp3.png", 
+    "pictures_purple/pp4.png",
+    "pictures_purple/pp5.png",
+    "pictures_purple/pp6.png", 
+    "pictures_purple/pp7.png",
+    "pictures_purple/pp8.png",
+    "pictures_purple/pp9.png",
 ];
 
 const positions = [
-    { left: '24.2%', top: '59%' },
-    { left: '65.5%', top: '49%' },
-    { left: '42.5%', top: '44%' },
-    { left: '64%', top: '19%' },
-    { left: '51%', top: '25.75%' },
-    { left: '56%', top: '37.75%' },
+    { left: '45.5%', top: '42%' },
+    { left: '54%', top: '45%' },
+    { left: '48%', top: '51%' },
+    { left: '35%', top: '61%' },
+    { left: '69.5%', top: '58.5%' },
+    { left: '47.5%', top: '49%' },
     { left: '45%', top: '57%' },
-    { left: '49%', top: '26%' }
+    { left: '49%', top: '26%' },
+    { left: '52%', top: '46%' }
 ];
 
 const sizes = [
-    { width: '95px', height: '95px' },
+    { width: '150px', height: '150px' },
+    { width: '65px', height: '65px' },
+    { width: '23px', height: '23px' },
+    { width: '49px', height: '49px' },
     { width: '80px', height: '80px' },
-    { width: '140px', height: '140px' },
-    { width: '77px', height: '77px' },
-    { width: '60px', height: '60px' },
-    { width: '30px', height: '30px' },
+    { width: '57px', height: '57px' },
     { width: '110px', height: '110px' },
-    { width: '40px', height: '40px' }
+    { width: '40px', height: '40px' },
+    { width: '230px', height: '230px' }
 ];
 
 console.log("init");
@@ -78,13 +81,13 @@ function changeImage() {
             circle.style.width = newSize.width;
             circle.style.height = newSize.height;
 
-            // Check if it is the last image and redirect if true
-            if (currentIndex === 0) { // This means it has looped back to the first image
-                window.location.href = 'levelDrei.html'; 
+            
+            if (currentIndex === 0) { 
+                window.location.href = 'levelVier.html'; 
             }
-        }, 250); // 250 milliseconds for fade-out transition
+        }, 250); 
 
-    }, 2000); // 2000 milliseconds delay (2 seconds)
+    }, 2000); 
 }
 
 window.onload = function() {
@@ -95,7 +98,6 @@ window.onload = function() {
     button.style.left = initialPosition.left;
     button.style.top = initialPosition.top;
 
-    // Ensure circle is positioned same as button
     const circle = document.getElementById('circle');
     const initialSize = sizes[0];
     button.style.width = initialSize.width;
@@ -105,6 +107,5 @@ window.onload = function() {
     circle.style.left = initialPosition.left;
     circle.style.top = initialPosition.top;
 
-    // Add click event listener to button
     button.addEventListener('click', changeImage);
 };
