@@ -67,6 +67,7 @@ const phrases = [
     "Not quite.", "Nice try."
 ];
 
+
 console.log("init");
 
 function changeImage() {
@@ -120,13 +121,14 @@ function changeImage() {
 
             // Update the position and size of the wrongDiv
             updateWrongDiv();
-            
-            if (currentIndex === 0) { 
-                window.location.href = 'levelVier.html'; 
-            }
-        }, 250); 
 
-    }, 2000); 
+            // Check if it is the last image and redirect if true
+            if (currentIndex === 0) { // This means it has looped back to the first image
+                window.location.href = 'levelZwei.html'; 
+            }
+        }, 250); // 250 milliseconds for fade-out transition
+
+    }, 2000); // 2000 milliseconds delay (2 seconds)
 }
 
 window.onload = function() {
@@ -137,6 +139,7 @@ window.onload = function() {
     button.style.left = initialPosition.left;
     button.style.top = initialPosition.top;
 
+    // Ensure circle is positioned same as button
     const circle = document.getElementById('circle');
     const initialSize = sizes[0];
     button.style.width = initialSize.width;
@@ -146,5 +149,40 @@ window.onload = function() {
     circle.style.left = initialPosition.left;
     circle.style.top = initialPosition.top;
 
+    // Add click event listener to button
     button.addEventListener('click', changeImage);
 };
+
+const wrongDiv = document.getElementById('wrong');
+
+    // Add click event listener to wrongDiv
+    wrongDiv.addEventListener('click', () => {
+        // Select a random phrase from the phrases array
+        const randomIndex = Math.floor(Math.random() * phrases.length);
+        const randomPhrase = phrases[randomIndex];
+
+        // Display the random phrase in the wrongDiv
+        wrongDiv.innerText = randomPhrase;
+
+        // Clear the text after a certain duration (e.g., 2 seconds)
+        setTimeout(() => {
+            wrongDiv.innerText = '';
+        }, 2000);
+    });
+
+    // Function to update the position and size of the wrongDiv
+    function updateWrongDiv() {
+        const currentPosIndex = currentIndex % divPositions.length;
+        const currentSizeIndex = currentIndex % divSizes.length;
+
+        // Update position
+        wrongDiv.style.left = divPositions[currentPosIndex].left;
+        wrongDiv.style.top = divPositions[currentPosIndex].top;
+
+        // Update size
+        wrongDiv.style.width = divSizes[currentSizeIndex].width;
+        wrongDiv.style.height = divSizes[currentSizeIndex].height;
+    }
+
+    // Call the function initially
+    updateWrongDiv();
