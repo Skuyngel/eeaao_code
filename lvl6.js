@@ -9,19 +9,21 @@ const images = [
 ];
 
 const positions = [
-    { left: '80%', top: '25%' },
-    { left: '68%', top: '42.5%' },
-    { left: '45%', top: '35%' },
-    { left: '92%', top: '32%' },
-    { left: '83%', top: '22%' }
+    { left: '30%', top: '53%' },
+    { left: '77%', top: '17.5%' },
+    { left: '70%', top: '63%' },
+    { left: '14.5%', top: '18%' },
+    { left: '46.5%', top: '41.5%' },
+    { left: '37%', top: '52%' }
 ];
 
 const sizes = [
-    { width: '220px', height: '220px' },
-    { width: '25px', height: '25px' },
-    { width: '90px', height: '90px' },
-    { width: '15px', height: '15px' },
-    { width: '130px', height: '130px' }
+    { width: '280px', height: '280px' },
+    { width: '50px', height: '50px' },
+    { width: '75px', height: '75px' },
+    { width: '310px', height: '310px' },
+    { width: '80px', height: '80px' },
+    { width: '370px', height: '370px' }
 ];
 
 console.log("init");
