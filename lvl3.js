@@ -36,28 +36,28 @@ const sizes = [
 ];
 
 const divPositions = [
-    { left: '20%', top: '70%' },
-    { left: '28%', top: '53%' },
-    { left: '75%', top: '70%' },
-    { left: '32%', top: '59.5%' },
-    { left: '45.5%', top: '42%' },
-    { left: '54%', top: '45%' },
-    { left: '45.5%', top: '42%' },
-    { left: '54%', top: '45%' },
-    { left: '45.5%', top: '42%' }
+    { left: '0%', top: '0%' },
+    { left: '25%', top: '25%' },
+    { left: '65%', top: '49%' },
+    { left: '0%', top: '0%' },
+    { left: '30%', top: '45%' },
+    { left: '40%', top: '67%' },
+    { left: '0%', top: '0%' },
+    { left: '65%', top: '57%' },
+    { left: '0%', top: '0%' }
     // Add more positions as needed
 ];
 
 const divSizes = [
     { width: '0px', height: '0px' },
-    { width: '250px', height: '250px' },
+    { width: '850px', height: '450px' },
     { width: '200px', height: '200px' },
-    { width: '40px', height: '40px' },
+    { width: '0px', height: '0px' },
+    { width: '140px', height: '140px' },
+    { width: '300px', height: '300px' },
+    { width: '0px', height: '0px' },
     { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
+    { width: '0px', height: '0px' },
     // Add more sizes as needed
 ];
 
@@ -124,7 +124,7 @@ function changeImage() {
 
             // Check if it is the last image and redirect if true
             if (currentIndex === 0) { // This means it has looped back to the first image
-                window.location.href = 'levelZwei.html'; 
+                window.location.href = 'levelVier.html'; 
             }
         }, 250); // 250 milliseconds for fade-out transition
 
