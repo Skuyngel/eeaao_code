@@ -27,29 +27,21 @@ const sizes = [
 ];
 
 const divPositions = [
-    { left: '20%', top: '70%' },
-    { left: '28%', top: '53%' },
-    { left: '75%', top: '70%' },
-    { left: '32%', top: '59.5%' },
-    { left: '45.5%', top: '42%' },
-    { left: '54%', top: '45%' },
-    { left: '45.5%', top: '42%' },
-    { left: '54%', top: '45%' },
-    { left: '45.5%', top: '42%' }
-    // Add more positions as needed
+    { left: '70%', top: '50%' },
+    { left: '80%', top: '15%' },
+    { left: '75%', top: '7%' },
+    { left: '45%', top: '50%' },
+    { left: '75%', top: '4%' },
+    { left: '0%', top: '36%' }
 ];
 
 const divSizes = [
-    { width: '0px', height: '0px' },
     { width: '250px', height: '250px' },
     { width: '200px', height: '200px' },
-    { width: '40px', height: '40px' },
+    { width: '200px', height: '300px' },
+    { width: '40px', height: '200px' },
     { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    // Add more sizes as needed
+    { width: '500px', height: '200px' }
 ];
 
 const phrases = [
@@ -114,7 +106,7 @@ function changeImage() {
 
             // Check if it is the last image and redirect if true
             if (currentIndex === 0) { // This means it has looped back to the first image
-                window.location.href = 'levelZwei.html'; 
+                window.location.href = 'levelSieben.html'; 
             }
         }, 250); // 250 milliseconds for fade-out transition
 
