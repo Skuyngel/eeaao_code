@@ -1,3 +1,4 @@
+
 let currentIndex = 0;
 const images = [
     "pictures_intro/ip1.png", "pictures_intro/ip2.png", "pictures_intro/ip3.png", 
