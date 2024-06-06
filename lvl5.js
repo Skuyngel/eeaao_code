@@ -24,29 +24,19 @@ const sizes = [
 ];
 
 const divPositions = [
-    { left: '20%', top: '70%' },
-    { left: '28%', top: '53%' },
-    { left: '75%', top: '70%' },
-    { left: '32%', top: '59.5%' },
-    { left: '45.5%', top: '42%' },
-    { left: '54%', top: '45%' },
-    { left: '45.5%', top: '42%' },
-    { left: '54%', top: '45%' },
-    { left: '45.5%', top: '42%' }
-    // Add more positions as needed
+    { left: '65%', top: '75%' },
+    { left: '10%', top: '43%' },
+    { left: '66%', top: '13%' },
+    { left: '37%', top: '46%' },
+    { left: '55%', top: '47%' }
 ];
 
 const divSizes = [
-    { width: '0px', height: '0px' },
-    { width: '250px', height: '250px' },
-    { width: '200px', height: '200px' },
-    { width: '40px', height: '40px' },
-    { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    { width: '200px', height: '200px' },
-    // Add more sizes as needed
+    { width: '50px', height: '50px' },
+    { width: '50px', height: '50px' },
+    { width: '100px', height: '100px' },
+    { width: '80px', height: '80px' },
+    { width: '40px', height: '40px' }
 ];
 
 const phrases = [
@@ -111,7 +101,7 @@ function changeImage() {
 
             // Check if it is the last image and redirect if true
             if (currentIndex === 0) { // This means it has looped back to the first image
-                window.location.href = 'levelZwei.html'; 
+                window.location.href = 'levelSechs.html'; 
             }
         }, 250); // 250 milliseconds for fade-out transition
 
