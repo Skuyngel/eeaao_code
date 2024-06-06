@@ -20,7 +20,7 @@ img {
     min-height: calc(100vh);
 }
 
-#button1 {
+button {
     position: absolute;
     z-index: 30;
     width: 200px;
@@ -33,52 +33,11 @@ img {
     transition: all 0.5s ease;
 }
 
-#button2 { /*the wrong one*/
-    position: absolute;
-    z-index: 30;
-    width: 200px;
-    height: 200px;
-    border: 2px solid rgb(0, 114, 71);
-    background: transparent;
-    border-radius: 100%;
-    left: 42%;
-    top: 38%;
-    transition: all 0.5s ease;
-}
-
-
-#round {
-    opacity: 0;
-    display: none;
-    position: absolute;
-    margin: 0;
-}
-
-#round.pulse{
-    opacity: 1;
-    display: block;
-    animation: jo 2s infinite;
-}
-
-@keyframes  jo {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.5);
-    }
-    100% {
-        transform: scale(1);
-        
-    }
-}
-
 #changeButton {
     display: none;
 }
 
-/*.buttonfather{
-}*/
+
 .level1 {
     --circle-color: red;
 }
