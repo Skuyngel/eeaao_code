@@ -17,7 +17,7 @@ const positions = [
     { left: '64%', top: '19%' },
     { left: '51%', top: '25.75%' },
     { left: '56%', top: '37.75%' },
-    { left: '45%', top: '57%' },
+    { left: '54.5%', top: '51.5%' },
     { left: '49%', top: '26%' }
 ];
 
@@ -28,7 +28,7 @@ const sizes = [
     { width: '77px', height: '77px' },
     { width: '60px', height: '60px' },
     { width: '30px', height: '30px' },
-    { width: '110px', height: '110px' },
+    { width: '32px', height: '32px' },
     { width: '40px', height: '40px' }
 ];
 
