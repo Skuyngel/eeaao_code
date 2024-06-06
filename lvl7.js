@@ -20,6 +20,38 @@ const sizes = [
     { width: '400px', height: '400px' }
 ];
 
+const divPositions = [
+    { left: '20%', top: '70%' },
+    { left: '28%', top: '53%' },
+    { left: '75%', top: '70%' },
+    { left: '32%', top: '59.5%' },
+    { left: '45.5%', top: '42%' },
+    { left: '54%', top: '45%' },
+    { left: '45.5%', top: '42%' },
+    { left: '54%', top: '45%' },
+    { left: '45.5%', top: '42%' }
+    // Add more positions as needed
+];
+
+const divSizes = [
+    { width: '0px', height: '0px' },
+    { width: '250px', height: '250px' },
+    { width: '200px', height: '200px' },
+    { width: '40px', height: '40px' },
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    { width: '200px', height: '200px' },
+    // Add more sizes as needed
+];
+
+const phrases = [
+    "Try again!", "Wrong circle", "Nu-uh", "Nope.", 
+    "Try harder", "That's not it.", "Almost.", 
+    "Not quite.", "Nice try."
+];
+
 console.log("init");
 
 function changeImage() {
