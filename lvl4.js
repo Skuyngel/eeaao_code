@@ -1,35 +1,32 @@
 currentIndex = 0;
 const images = [
-    "pictures_rose/rp1.png",
-    "pictures_rose/rp2.png",
-    "pictures_rose/rp3.png", 
-    "pictures_rose/rp4.png",
-    "pictures_rose/rp5.png",
-    "pictures_rose/rp6.png", 
-    "pictures_rose/rp7.png",
-    "pictures_rose/rp8.png"
+    "pictures_greenrose/grp1.png",
+    "pictures_greenrose/grp2.png",
+    "pictures_greenrose/grp3.png", 
+    "pictures_greenrose/grp4.png",
+    "pictures_greenrose/grp5.png",
+    "pictures_greenrose/grp6.png", 
+    "pictures_greenrose/grp7.png"
 ];
 
 const positions = [
-    { left: '24.2%', top: '59%' },
-    { left: '65.5%', top: '49%' },
-    { left: '42.5%', top: '44%' },
-    { left: '64%', top: '19%' },
+    { left: '52.4%', top: '52.3%' },
+    { left: '40.5%', top: '63.5%' },
+    { left: '32.5%', top: '34.5%' },
+    { left: '47%', top: '36%' },
     { left: '51%', top: '25.75%' },
     { left: '56%', top: '37.75%' },
-    { left: '54.5%', top: '51.5%' },
-    { left: '46%', top: '20%' }
+    { left: '54.5%', top: '51.5%' }
 ];
 
 const sizes = [
     { width: '95px', height: '95px' },
-    { width: '80px', height: '80px' },
-    { width: '140px', height: '140px' },
-    { width: '77px', height: '77px' },
+    { width: '30px', height: '30px' },
+    { width: '100px', height: '100px' },
+    { width: '70px', height: '70px' },
     { width: '60px', height: '60px' },
     { width: '30px', height: '30px' },
-    { width: '32px', height: '32px' },
-    { width: '89px', height: '89px' }
+    { width: '32px', height: '32px' }
 ];
 
 console.log("init");
