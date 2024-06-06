@@ -15,7 +15,7 @@ const sizes = [
     { width: '150px', height: '150px' },
     { width: '150px', height: '150px' },
     { width: '150px', height: '150px' },
-    { width: '70px', height: '70px' } // Changed to match button size
+    { width: '70px', height: '70px' } 
 ];
 
 function changeImage() {
