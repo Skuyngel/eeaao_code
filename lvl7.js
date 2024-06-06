@@ -59,7 +59,6 @@ function changeImage() {
     console.log(currentIndex);
     const button = document.querySelector('button');
     const circle = document.getElementById('circle');
-    const text = document.querySelector('.epi'); // Get the text element
     const wrongDiv = document.getElementById('wrong');
 
     // Show and animate the circle
@@ -107,18 +106,9 @@ function changeImage() {
             // Update the position and size of the wrongDiv
             updateWrongDiv();
 
-
-            
-        // Show the button only after the last image
-        if (currentIndex === images.length - 1) {
-            text.style.display = 'block'; // Show the text on the last picture
-        } else {
-            text.style.display = 'none'; // Hide the text on other pictures
-        }
-
             // Check if it is the last image and redirect if true
             if (currentIndex === 0) { // This means it has looped back to the first image
-                window.location.href = 'index.html'; 
+                window.location.href = 'levelZwei.html'; 
             }
         }, 250); // 250 milliseconds for fade-out transition
 
@@ -146,3 +136,37 @@ window.onload = function() {
     // Add click event listener to button
     button.addEventListener('click', changeImage);
 };
+
+const wrongDiv = document.getElementById('wrong');
+
+    // Add click event listener to wrongDiv
+    wrongDiv.addEventListener('click', () => {
+        // Select a random phrase from the phrases array
+        const randomIndex = Math.floor(Math.random() * phrases.length);
+        const randomPhrase = phrases[randomIndex];
+
+        // Display the random phrase in the wrongDiv
+        wrongDiv.innerText = randomPhrase;
+
+        // Clear the text after a certain duration (e.g., 2 seconds)
+        setTimeout(() => {
+            wrongDiv.innerText = '';
+        }, 2000);
+    });
+
+    // Function to update the position and size of the wrongDiv
+    function updateWrongDiv() {
+        const currentPosIndex = currentIndex % divPositions.length;
+        const currentSizeIndex = currentIndex % divSizes.length;
+
+        // Update position
+        wrongDiv.style.left = divPositions[currentPosIndex].left;
+        wrongDiv.style.top = divPositions[currentPosIndex].top;
+
+        // Update size
+        wrongDiv.style.width = divSizes[currentSizeIndex].width;
+        wrongDiv.style.height = divSizes[currentSizeIndex].height;
+    }
+
+    // Call the function initially
+    updateWrongDiv();
