@@ -80,7 +80,7 @@ function changeImage() {
 
             // Check if it is the last image and redirect if true
             if (currentIndex === 0) { // This means it has looped back to the first image
-                window.location.href = 'levelZwei.html'; 
+                window.location.href = 'levelDrei.html'; 
             }
         }, 250); // 250 milliseconds for fade-out transition
 
