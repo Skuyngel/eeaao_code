@@ -12,27 +12,27 @@ const images = [
 ];
 
 const positions = [
-    { left: '45.5%', top: '42%' },
-    { left: '54%', top: '45%' },
-    { left: '48%', top: '51%' },
-    { left: '35%', top: '61%' },
-    { left: '69.5%', top: '58.5%' },
-    { left: '47.5%', top: '49%' },
-    { left: '45%', top: '57%' },
-    { left: '49%', top: '26%' },
-    { left: '52%', top: '46%' }
+    { left: '37%', top: '50%' },
+    { left: '4%', top: '72%' },
+    { left: '21%', top: '53%' },
+    { left: '54%', top: '51%' },
+    { left: '48%', top: '36%' },
+    { left: '47%', top: '48%' },
+    { left: '43%', top: '40%' },
+    { left: '62%', top: '27%' },
+    { left: '27%', top: '10%' }
 ];
 
 const sizes = [
-    { width: '150px', height: '150px' },
-    { width: '65px', height: '65px' },
-    { width: '23px', height: '23px' },
-    { width: '49px', height: '49px' },
+    { width: '280px', height: '280px' },
+    { width: '15px', height: '15px' },
+    { width: '120px', height: '120px' },
+    { width: '90px', height: '90px' },
+    { width: '170px', height: '170px' },
+    { width: '70px', height: '70px' },
+    { width: '45px', height: '45px' },
     { width: '80px', height: '80px' },
-    { width: '57px', height: '57px' },
-    { width: '110px', height: '110px' },
-    { width: '40px', height: '40px' },
-    { width: '230px', height: '230px' }
+    { width: '500px', height: '500px' }
 ];
 
 console.log("init");
