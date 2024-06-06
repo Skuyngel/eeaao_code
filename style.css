@@ -77,11 +77,42 @@ img {
     display: none;
 }
 
+/*.buttonfather{
+}*/
+.level1 {
+    --circle-color: red;
+}
+
+.level2 {
+    --circle-color: #FF7F00;
+}
+
+.level3 {
+    --circle-color: #FFFF00;
+}
+
+.level4 {
+    --circle-color: #00FF00;
+}
+
+.level5 {
+    --circle-color: #0000FF;
+}
+
+.level6 {
+    --circle-color: #4B0082;
+}
+
+.level7 {
+    --circle-color: #9400D3;
+}
+
 #circle {
     opacity: 0;
     display: none;
     position: absolute;
     margin: 0;
+    stroke: var(--circle-color);
 }
 
 #circle.pulse{
