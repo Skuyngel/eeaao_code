@@ -75,6 +75,7 @@ function changeImage() {
     console.log(currentIndex);
     const button = document.querySelector('button');
     const circle = document.getElementById('circle');
+    const wrongDiv = document.getElementById('wrong');
 
     // Show and animate the circle
     circle.style.display = 'block';
@@ -100,19 +101,26 @@ function changeImage() {
             image.classList.remove('fade-out');
             image.classList.add('fade-in');
 
-            // Update button and circle position
+            // Update button, circle, and wrongDiv position and size
             const newPosition = positions[currentIndex];
             button.style.left = newPosition.left;
             button.style.top = newPosition.top;
             circle.style.left = newPosition.left;
             circle.style.top = newPosition.top;
+            wrongDiv.style.left = newPosition.left;
+            wrongDiv.style.top = newPosition.top;
 
-            // Update button and circle size
+            // Update button, circle, and wrongDiv size
             const newSize = sizes[currentIndex];
             button.style.width = newSize.width;
             button.style.height = newSize.height;
             circle.style.width = newSize.width;
             circle.style.height = newSize.height;
+            wrongDiv.style.width = newSize.width;
+            wrongDiv.style.height = newSize.height;
+
+            // Update the position and size of the wrongDiv
+            updateWrongDiv();
 
             // Check if it is the last image and redirect if true
             if (currentIndex === 0) { // This means it has looped back to the first image
